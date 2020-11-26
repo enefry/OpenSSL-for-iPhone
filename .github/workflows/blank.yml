@@ -27,5 +27,5 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build iOS Action
-        run: ./build-libssl.sh --version=1.1.1d
+        run: ./build-libssl.sh --version=1.1.1d && echo "go build done!" && pwd && ls -lah  && tar -zcf "openssl.tar.gz" lib include  && bash ./upload-script.sh "openssl.tar.gz" && pwd && ls -lah 
 
